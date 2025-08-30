@@ -5,7 +5,7 @@
     <div class="col-4">
       <ul class="list-group">
         <% @volunteers.each do |volunteer| %>
-          <li class="list-group-item text-center"><%= volunteer.name %></li>
+          <li class="list-group-item text-center"><%= link_to volunteer.name, volunteer_path(volunteer) %></li>
         <% end %>
       </ul>
     </div>
