@@ -1,0 +1,13 @@
+<h1 class="text-center">Volunteers</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <ul class="list-group">
+        <% @volunteers.each do |volunteer| %>
+          <li class="list-group-item text-center"><%= volunteer.name %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
