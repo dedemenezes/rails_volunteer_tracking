@@ -1,0 +1,11 @@
+<h1 class="text-center">New Shift</h1>
+
+<div class="container">
+  <%# <form action="/volunteers/:volunteer_id/shifts" ></form> %>
+  <%= simple_form_for([@volunteer, @shift]) do |f| %>
+    <%= f.association :event %>
+    <%= f.input :feedback %>
+
+    <%= f.submit "Add shift", class: "btn btn-primary" %>
+  <% end %>
+</div>

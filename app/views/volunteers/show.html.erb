@@ -2,5 +2,24 @@
 
 
 <div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Evento</th>
+          <th>Feedback</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @volunteer.shifts.each do |shift| %>
+          <tr>
+            <td><%= shift.event.name %></td>
+            <td><%= shift.feedback %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
   <%= link_to "Ver todos os voluntários", root_path %>
 </div>
